@@ -23,10 +23,14 @@ const Navbar = () => {
             <h1> Coin<span className='purple'>Search</span></h1>
         </div> 
     </NavLink>
-    <NavLink style={navLinkStyles} to='/profile'>Profile</NavLink>
+    <NavLink style={navLinkStyles} to='/profile'>
+      <h1 className='bar'>Profile</h1>
+      </NavLink>
     {
       !auth.user && (
-        <NavLink style={navLinkStyles} to='/login'>Login</NavLink>
+        <NavLink style={navLinkStyles} to='/login'>
+          <h1 className='bar'>Login</h1>
+        </NavLink>
       )
     }
     

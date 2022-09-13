@@ -32,7 +32,7 @@ function App() {
       <Route path='/coin' element = {<Coin/>}>
         <Route path=':coinId' element={<Coin/>}/>
       </Route>
-      <Route path='/profile' element = {<RequireAuth><Profile/></RequireAuth>}></Route>
+      <Route path='/profile' element = {<Profile/>}></Route>
       <Route path='/login' element = {<Login/>}></Route>
       <Route path='/register' element ={<Register></Register>}></Route>
     </Routes>
