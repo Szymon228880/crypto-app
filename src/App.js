@@ -5,9 +5,10 @@ import Coins from './components/Coins'
 import Coin from './routes/Coin'
 import Navbar from './components/Navbar';
 import {Routes,Route} from 'react-router-dom';
-import UserInfo from './components/UserInfo';
 import { Profile } from './components/Profile';
-
+import { Login } from './components/Login';
+import { RequireAuth} from './components/RequireAuth'
+import { Register } from './components/Register';
 
 function App() {
 
@@ -31,7 +32,9 @@ function App() {
       <Route path='/coin' element = {<Coin/>}>
         <Route path=':coinId' element={<Coin/>}/>
       </Route>
-      <Route path='/userInfo' element = {<UserInfo/>}></Route>
+      <Route path='/profile' element = {<RequireAuth><Profile/></RequireAuth>}></Route>
+      <Route path='/login' element = {<Login/>}></Route>
+      <Route path='/register' element ={<Register></Register>}></Route>
     </Routes>
      
     </AuthProvider>

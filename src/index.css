@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
 *{
   box-sizing: border-box;
@@ -29,4 +33,13 @@ h1{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav a {
+  margin-right: 16px;
+}
+
+nav a.active {
+  text-decoration: none;
+  font-weight:bold;
 }
